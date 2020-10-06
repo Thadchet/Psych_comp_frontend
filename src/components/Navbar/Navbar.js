@@ -16,6 +16,7 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -196,20 +197,24 @@ const Navbar = () => {
             <IconButton
               aria-label="show home component"
               color="inherit"
-              href="/"
+              //   href="/"
             >
-              <Badge badgeContent={4} color="secondary">
-                <HomeIcon></HomeIcon>
-              </Badge>
+              <Link to="/">
+                <Badge badgeContent={4} color="secondary">
+                  <HomeIcon></HomeIcon>
+                </Badge>
+              </Link>
             </IconButton>
             <IconButton
               aria-label="show delete component"
               color="inherit"
-              href="/delete"
+              //   href="/delete"
             >
-              <Badge badgeContent={4} color="secondary">
-                <DeleteIcon></DeleteIcon>
-              </Badge>
+              <Link to="/delete">
+                <Badge badgeContent={4} color="secondary">
+                  <DeleteIcon></DeleteIcon>
+                </Badge>
+              </Link>
             </IconButton>
             {/* <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="secondary">

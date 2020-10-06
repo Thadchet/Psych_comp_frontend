@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
+import DeletePage from "../Deletepage/DeletePage";
 import { Route } from "react-router-dom";
 
 const Homepage = () => {
@@ -8,9 +9,9 @@ const Homepage = () => {
         <header>
       <Navbar />
       </header>
-      <Route path='/' render={() => <h1>Home</h1>}></Route>
-      <Route path='/delete' render={() => <h1>Delete</h1>}></Route>
-      {/* <Route path='/some-componenr' component={some_component}></Route> */}
+      <Route path='/' exact render={() => <h1>Home</h1>}></Route>
+      {/* <Route path='/delete' render={() => <h1>Delete</h1>}></Route> */}
+      <Route path='/delete' component={DeletePage}></Route>
     </div>
   );
 };
